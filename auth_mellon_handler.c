@@ -3872,7 +3872,7 @@ int am_auth_mellon_user(request_rec *r)
                     AM_LOG_RERROR(APLOG_MARK, APLOG_INFO, 0, r,
                       "Deny unauthenticated X-Requested-With XMLHttpRequest "
                       "(AJAX) request");
-                    return HTTP_FORBIDDEN;
+                    return HTTP_UNAUTHORIZED;
             }
 
 #ifdef HAVE_ECP
